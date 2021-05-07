@@ -7,6 +7,7 @@ var driveUploaderId = 'W4MDc7RNWJ'
 
 
 $(".goToStep-2").click(function() {
+    console.log('ok');
     $("#step" + currentStep).addClass('step-hidden');
     $("#step2").removeClass('step-hidden');
     currentStep = 2;
