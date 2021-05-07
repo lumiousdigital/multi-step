@@ -14,7 +14,7 @@ $(".goToStep-2").click(function() {
 
 $(".goToStep-4").click(function() {
     getStep2Data();
-    if (firstName && lastName && emailAddress && phoneNumber && deadline && website && agreement) {
+    if (firstName && lastName && emailAddress && phoneNumber && website && agreement) {
         $("#step" + currentStep).addClass('step-hidden');
         $("#step4").removeClass('step-hidden');
         currentStep = 4;
@@ -27,7 +27,7 @@ $(".goToStep-4").click(function() {
 
 $(".goToStep-5").click(function() {
         getStep2Data();
-        if (firstName && lastName && emailAddress && phoneNumber && deadline && website && agreement) {
+        if (firstName && lastName && emailAddress && phoneNumber && website && agreement) {
             if (validateProduct(currentProduct)) {
                 $("#product-" + currentProduct + "-form").addClass('product-hidden');
                 $("#product-" + currentProduct + "-collapsed").removeClass('product-hidden');
@@ -64,7 +64,7 @@ $(".detailed-button").click(function() {
 
 $("#step2-next").click(function() {
    getStep2Data();
-   if (firstName && lastName && emailAddress && phoneNumber && deadline && website && agreement) {
+   if (firstName && lastName && emailAddress && phoneNumber && website && agreement) {
        $("#step2").addClass('step-hidden');
        $("#step3").removeClass('step-hidden');
        currentStep++;
