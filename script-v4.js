@@ -204,14 +204,17 @@ function addProduct(number) {
     $(".all-products").append(`<div class="product-wrapper">
               <div id="product-${number}-form" class="product-form-wrapper">
                 <div class="fieldset is-on-upload">
-                  <label for="Product-${number}-Name" class="field-label">Product Name</label>
+                  <label for="Product-${number}-Name" class="field-label">Product Name <span class="required-label">Required</span></label>
                   <input type="text" class="input w-input" maxlength="256" name="Product-Name" data-name="Product Name" placeholder="e.g. Tan Leather Sofa" id="Product-${number}-Name">
                 </div>
                 <div class="fieldset is-on-upload">
                   <div class="fieldset-info">
                     <label for="Product-${number}-Materials" class="field-label">Materials <span class="required-label">Required</span></label>
                     <figure class="hint hint-materials">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 20 20"><path d="M11,18h2V16H11ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.011,8.011,0,0,1,12,20ZM12,6a4,4,0,0,0-4,4h2a2,2,0,0,1,4,0c0,2-3,1.75-3,5h2c0-2.25,3-2.5,3-5A4,4,0,0,0,12,6Z" transform="translate(-2 -2)"/></svg>
+                      <div class="hint-message">Please add the description here. It can take its entire length. Try not to add a lot of text as it might get overlapped and not fit on mobile screens.</div>
+                      <div class="hint-img w-embed"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewbox="0 0 20 20">
+                          <path d="M11,18h2V16H11ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.011,8.011,0,0,1,12,20ZM12,6a4,4,0,0,0-4,4h2a2,2,0,0,1,4,0c0,2-3,1.75-3,5h2c0-2.25,3-2.5,3-5A4,4,0,0,0,12,6Z" transform="translate(-2 -2)"></path>
+                        </svg></div>
                     </figure>
                   </div>
                   <input type="text" class="input w-input" maxlength="256" name="Materials" data-name="Materials" placeholder="e.g. Leather + Metal " id="Product-${number}-Materials">
@@ -219,8 +222,11 @@ function addProduct(number) {
                 <div class="fieldset is-full">
                   <div class="fieldset-info">
                     <label for="Product-${number}-Height" class="field-label">DIMENSIONS IN INCHES (HEIGHT | LENGTH | WIDTH) <span class="required-label">Required</span></label>
-                    <figure class="hint hint-dimension">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 20 20"><path d="M11,18h2V16H11ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.011,8.011,0,0,1,12,20ZM12,6a4,4,0,0,0-4,4h2a2,2,0,0,1,4,0c0,2-3,1.75-3,5h2c0-2.25,3-2.5,3-5A4,4,0,0,0,12,6Z" transform="translate(-2 -2)"/></svg>
+                    <figure class="hint hint-materials">
+                      <div class="hint-message">Please add the description here. It can take its entire length. Try not to add a lot of text as it might get overlapped and not fit on mobile screens.</div>
+                      <div class="hint-img w-embed"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewbox="0 0 20 20">
+                          <path d="M11,18h2V16H11ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.011,8.011,0,0,1,12,20ZM12,6a4,4,0,0,0-4,4h2a2,2,0,0,1,4,0c0,2-3,1.75-3,5h2c0-2.25,3-2.5,3-5A4,4,0,0,0,12,6Z" transform="translate(-2 -2)"></path>
+                        </svg></div>
                     </figure>
                   </div>
                   <div class="input-group">
@@ -232,8 +238,11 @@ function addProduct(number) {
                 <div class="fieldset is-full">
                   <div class="fieldset-info">
                     <label class="field-label">UPLOAD PRODUCT IMAGES OR 3D FILES</label>
-                    <figure class="hint hint-files">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 20 20"><path d="M11,18h2V16H11ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.011,8.011,0,0,1,12,20ZM12,6a4,4,0,0,0-4,4h2a2,2,0,0,1,4,0c0,2-3,1.75-3,5h2c0-2.25,3-2.5,3-5A4,4,0,0,0,12,6Z" transform="translate(-2 -2)"/></svg>
+                    <figure class="hint hint-materials">
+                      <div class="hint-message">Please add the description here. It can take its entire length. Try not to add a lot of text as it might get overlapped and not fit on mobile screens.</div>
+                      <div class="hint-img w-embed"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewbox="0 0 20 20">
+                          <path d="M11,18h2V16H11ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.011,8.011,0,0,1,12,20ZM12,6a4,4,0,0,0-4,4h2a2,2,0,0,1,4,0c0,2-3,1.75-3,5h2c0-2.25,3-2.5,3-5A4,4,0,0,0,12,6Z" transform="translate(-2 -2)"></path>
+                        </svg></div>
                     </figure>
                   </div>
                   <label class="w-checkbox checkbox is-on-opload">
