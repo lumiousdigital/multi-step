@@ -210,24 +210,12 @@ function addProduct(number) {
                 <div class="fieldset is-on-upload">
                   <div class="fieldset-info">
                     <label for="Product-${number}-Materials" class="field-label">Materials <span class="required-label">Required</span></label>
-                    <figure class="hint hint-materials">
-                      <div class="hint-message">Please add the description here. It can take its entire length. Try not to add a lot of text as it might get overlapped and not fit on mobile screens.</div>
-                      <div class="hint-img w-embed"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewbox="0 0 20 20">
-                          <path d="M11,18h2V16H11ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.011,8.011,0,0,1,12,20ZM12,6a4,4,0,0,0-4,4h2a2,2,0,0,1,4,0c0,2-3,1.75-3,5h2c0-2.25,3-2.5,3-5A4,4,0,0,0,12,6Z" transform="translate(-2 -2)"></path>
-                        </svg></div>
-                    </figure>
                   </div>
                   <input type="text" class="input w-input" maxlength="256" name="Materials" data-name="Materials" placeholder="e.g. Leather + Metal " id="Product-${number}-Materials">
                 </div>
                 <div class="fieldset is-full">
                   <div class="fieldset-info">
                     <label for="Product-${number}-Height" class="field-label">DIMENSIONS IN INCHES (HEIGHT | LENGTH | WIDTH) <span class="required-label">Required</span></label>
-                    <figure class="hint hint-materials">
-                      <div class="hint-message">Please add the description here. It can take its entire length. Try not to add a lot of text as it might get overlapped and not fit on mobile screens.</div>
-                      <div class="hint-img w-embed"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewbox="0 0 20 20">
-                          <path d="M11,18h2V16H11ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.011,8.011,0,0,1,12,20ZM12,6a4,4,0,0,0-4,4h2a2,2,0,0,1,4,0c0,2-3,1.75-3,5h2c0-2.25,3-2.5,3-5A4,4,0,0,0,12,6Z" transform="translate(-2 -2)"></path>
-                        </svg></div>
-                    </figure>
                   </div>
                   <div class="input-group">
                     <input type="tel" class="input-number w-input" maxlength="256" name="Product-Height" data-name="Product Height" placeholder="72”" id="Product-${number}-Height">
@@ -238,12 +226,6 @@ function addProduct(number) {
                 <div class="fieldset is-full">
                   <div class="fieldset-info">
                     <label class="field-label">UPLOAD PRODUCT IMAGES OR 3D FILES</label>
-                    <figure class="hint hint-materials">
-                      <div class="hint-message">Please add the description here. It can take its entire length. Try not to add a lot of text as it might get overlapped and not fit on mobile screens.</div>
-                      <div class="hint-img w-embed"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewbox="0 0 20 20">
-                          <path d="M11,18h2V16H11ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.011,8.011,0,0,1,12,20ZM12,6a4,4,0,0,0-4,4h2a2,2,0,0,1,4,0c0,2-3,1.75-3,5h2c0-2.25,3-2.5,3-5A4,4,0,0,0,12,6Z" transform="translate(-2 -2)"></path>
-                        </svg></div>
-                    </figure>
                   </div>
                   <label class="w-checkbox checkbox is-on-opload">
                     <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-icon"></div>
