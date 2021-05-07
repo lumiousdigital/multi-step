@@ -6,14 +6,13 @@ var uploadedFiles = [];
 var driveUploaderId = 'W4MDc7RNWJ'
 
 
-$(".goToStep-2").click(function() {
-  console.log('ok');
+$(".gotostep-2").click(function() {
     $("#step" + currentStep).addClass('step-hidden');
     $("#step2").removeClass('step-hidden');
     currentStep = 2;
 });
 
-$(".goToStep-4").click(function() {
+$(".gotostep-4").click(function() {
     getStep2Data();
     if (firstName && lastName && emailAddress && phoneNumber && website && agreement) {
         $("#step" + currentStep).addClass('step-hidden');
@@ -26,7 +25,7 @@ $(".goToStep-4").click(function() {
     }
 });
 
-$(".goToStep-5").click(function() {
+$(".gotostep-5").click(function() {
         getStep2Data();
         if (firstName && lastName && emailAddress && phoneNumber && website && agreement) {
             if (validateProduct(currentProduct)) {
@@ -210,18 +209,18 @@ function addProduct(number) {
                 </div>
                 <div class="fieldset is-on-upload">
                   <div class="fieldset-info">
-                    <label for="Product-${number}-Materials" class="field-label">Materials</label>
+                    <label for="Product-${number}-Materials" class="field-label">Materials <span class="required-label">Required</span></label>
                     <figure class="hint hint-materials">
-                      <img src="images/hint.png" loading="lazy" width="19" height="18" alt="" class="hint-img">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 20 20"><path d="M11,18h2V16H11ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.011,8.011,0,0,1,12,20ZM12,6a4,4,0,0,0-4,4h2a2,2,0,0,1,4,0c0,2-3,1.75-3,5h2c0-2.25,3-2.5,3-5A4,4,0,0,0,12,6Z" transform="translate(-2 -2)"/></svg>
                     </figure>
                   </div>
                   <input type="text" class="input w-input" maxlength="256" name="Materials" data-name="Materials" placeholder="e.g. Leather + Metal " id="Product-${number}-Materials">
                 </div>
                 <div class="fieldset is-full">
                   <div class="fieldset-info">
-                    <label for="Product-${number}-Height" class="field-label">DIMENSIONS IN INCHES (HEIGHT | LENGTH | WIDTH)</label>
+                    <label for="Product-${number}-Height" class="field-label">DIMENSIONS IN INCHES (HEIGHT | LENGTH | WIDTH) <span class="required-label">Required</span></label>
                     <figure class="hint hint-dimension">
-                      <img src="images/hint.png" loading="lazy" width="19" height="18" alt="" class="hint-img">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 20 20"><path d="M11,18h2V16H11ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.011,8.011,0,0,1,12,20ZM12,6a4,4,0,0,0-4,4h2a2,2,0,0,1,4,0c0,2-3,1.75-3,5h2c0-2.25,3-2.5,3-5A4,4,0,0,0,12,6Z" transform="translate(-2 -2)"/></svg>
                     </figure>
                   </div>
                   <div class="input-group">
@@ -234,7 +233,7 @@ function addProduct(number) {
                   <div class="fieldset-info">
                     <label class="field-label">UPLOAD PRODUCT IMAGES OR 3D FILES</label>
                     <figure class="hint hint-files">
-                      <img src="images/hint.png" loading="lazy" width="19" height="18" alt="" class="hint-img">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="100%" height="100%" viewBox="0 0 20 20"><path d="M11,18h2V16H11ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.011,8.011,0,0,1,12,20ZM12,6a4,4,0,0,0-4,4h2a2,2,0,0,1,4,0c0,2-3,1.75-3,5h2c0-2.25,3-2.5,3-5A4,4,0,0,0,12,6Z" transform="translate(-2 -2)"/></svg>
                     </figure>
                   </div>
                   <label class="w-checkbox checkbox is-on-opload">
@@ -243,15 +242,15 @@ function addProduct(number) {
                     <span for="Product Agreement" class="w-form-label">
                       I have read the <span class="guide-toggle">
                       <strong>How to Upload Guide</strong>
-                    </span> carefully. Note: delays may occur if assets do not meet quality guidelines.</span>
+                    </span> carefully. Note: delays may occur if assets do not meet quality guidelines. <span class="required-label">Required</span></span>
                   </label>
                   <div class="upload-grid">
                     <div class="upload-box" id="product-${number}-front">
-                      <div>FRONT*</div>
+                      <div>FRONT* <span class="required-label">Required</span></div>
                       <div class="driveuploader-replace required"></div>
                     </div>
                     <div class="upload-box" id="product-${number}-back">
-                      <div>BACK*</div>
+                      <div>BACK* <span class="required-label">Required</span></div>
                       <div class="driveuploader-replace required"></div>
                     </div>
                     <div class="upload-box" id="product-${number}-right-side">
