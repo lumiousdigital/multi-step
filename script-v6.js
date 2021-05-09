@@ -154,6 +154,8 @@ $(".add-product-button").click(function() {
         products.push(validateProduct(currentProduct));
         currentProduct = $(".all-products").children().length + 1;
         addProduct(currentProduct);
+        $(".save-product-button").removeClass('button-hidden');
+        $(".add-product-button").addClass('button-hidden');
         reload_js()
         $('#step-4-error-message').addClass('validation-error');
     } else {
