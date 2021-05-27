@@ -14,7 +14,7 @@ $(".gotostep-2").click(function() {
 
 $(".gotostep-4").click(function() {
     getStep2Data();
-    if (firstName && lastName && emailAddress && phoneNumber && website && agreement) {
+    if (firstName && emailAddress && agreement) {
         $("#step" + currentStep).addClass('step-hidden');
         $("#step4").removeClass('step-hidden');
         currentStep = 4;
@@ -27,12 +27,14 @@ $(".gotostep-4").click(function() {
 
 $(".gotostep-5").click(function() {
         getStep2Data();
-        if (firstName && lastName && emailAddress && phoneNumber && website && agreement) {
+        if (firstName && emailAddress && agreement) {
             if (validateProduct(currentProduct)) {
                 $("#product-" + currentProduct + "-form").addClass('product-hidden');
                 $("#product-" + currentProduct + "-collapsed").removeClass('product-hidden');
                 $("#product-" + currentProduct + "-collapsed").find('.added-product-label').text($("#Product-" + currentProduct + "-Name").val());
                 products[currentProduct-1] = validateProduct(currentProduct);
+                $(".save-product-button").addClass('button-hidden');
+                $(".add-product-button").removeClass('button-hidden');
             } else {
                 if (products.length) {
                     $("#product-" + currentProduct + "-form").parent().remove();
@@ -40,6 +42,7 @@ $(".gotostep-5").click(function() {
                 }
             }
             if (products.length) {
+                $("#step2").addClass('step-hidden');
                 $("#step4").addClass('step-hidden');
                 $("#step5").removeClass('step-hidden');
                 currentStep = 5;
@@ -48,8 +51,7 @@ $(".gotostep-5").click(function() {
             } else {
                 $('#step-4-error-message').removeClass('validation-error');
             }
-            $(".save-product-button").addClass('button-hidden');
-            $(".add-product-button").removeClass('button-hidden');
+
             $('#step-2-error-message').addClass('validation-error');
         } else {
             $('#step-2-error-message').removeClass('validation-error');
@@ -64,7 +66,7 @@ $(".detailed-button").click(function() {
 
 $("#step2-next").click(function() {
    getStep2Data();
-   if (firstName && lastName && emailAddress && phoneNumber && website && agreement) {
+   if (firstName && emailAddress && agreement) {
        $("#step2").addClass('step-hidden');
        $("#step3").removeClass('step-hidden');
        currentStep++;
@@ -78,6 +80,11 @@ $("#step3-next").click(function() {
     $("#step3").addClass('step-hidden');
     $("#step4").removeClass('step-hidden');
     currentStep++;
+    if (products.length) {
+        $("#step4-next").removeClass('button-hidden');
+    } else {
+        $("#step4-next").addClass('button-hidden');
+    }
 });
 
 $("#step4-next").click(function() {
@@ -98,11 +105,12 @@ $("#step4-next").click(function() {
         $('#json-data').text(JSON.stringify(products));
         currentStep++;
         $('#step-4-error-message').addClass('validation-error');
+        $(".save-product-button").addClass('button-hidden');
+        $(".add-product-button").removeClass('button-hidden');
     } else {
         $('#step-4-error-message').removeClass('validation-error');
     }
-    $(".save-product-button").addClass('button-hidden');
-    $(".add-product-button").removeClass('button-hidden');
+
 });
 
 function getStep2Data() {
@@ -172,6 +180,11 @@ $(".save-product-button").click(function() {
         $(".add-product-button").removeClass('button-hidden');
         $('#step-4-error-message').addClass('validation-error');
         editProduct(currentProduct - 1, validateProduct(currentProduct))
+        if (products.length) {
+            $("#step4-next").removeClass('button-hidden');
+        } else {
+            $("#step4-next").addClass('button-hidden');
+        }
     } else {
         $('#step-4-error-message').removeClass('validation-error');
     }
