@@ -254,26 +254,32 @@ function addProduct(number) {
                     <div class="upload-box" id="product-${number}-front">
                       <div>FRONT* <span class="required-label">Required</span></div>
                       <div class="driveuploader-replace required"></div>
+                      <div class=""max-info>Max. upload limit per upload 10MB</div>
                     </div>
                     <div class="upload-box" id="product-${number}-back">
                       <div>BACK* <span class="required-label">Required</span></div>
                       <div class="driveuploader-replace required"></div>
+                      <div class=""max-info>Max. upload limit per upload 10MB</div>
                     </div>
                     <div class="upload-box" id="product-${number}-right-side">
                       <div>RIGHT SIDE</div>
                       <div class="driveuploader-replace"></div>
+                      <div class=""max-info>Max. upload limit per upload 10MB</div>
                     </div>
                     <div class="upload-box" id="product-${number}-left-side">
                       <div>LEFT SIDE</div>
                       <div class="driveuploader-replace"></div>
+                      <div class=""max-info>Max. upload limit per upload 10MB</div>
                     </div>
                     <div class="upload-box" id="product-${number}-underneath">
                       <div>UNDERNEATH</div>
                       <div class="driveuploader-replace"></div>
+                      <div class=""max-info>Max. upload limit per upload 10MB</div>
                     </div>
                     <div class="upload-box" id="product-${number}-top">
                       <div>ON TOP</div>
                       <div class="driveuploader-replace"></div>
+                      <div class=""max-info>Max. upload limit per upload 10MB</div>
                     </div>
                   </div>
                   <div id="w-node-_28f9b9bc-2598-6637-e070-cc95a77e199b-8b257a5b" class="note">*Required Angles</div>
@@ -286,7 +292,7 @@ function addProduct(number) {
                 </div>
                 <div class="added-product-success">
                   <figure class="product-check">
-                    <img src="images/noun_tick_3547924.png" loading="lazy" width="28" height="28" alt="" class="check-img">
+                    <img src="https://uploads-ssl.webflow.com/608bc3922042743629257a5a/608c20eedd68c6aa4ae91d93_noun_tick_3547924.png" loading="lazy" width="28" height="28" alt="" class="check-img">
                   </figure>
                   <div>Details Complete</div>
                 </div>
